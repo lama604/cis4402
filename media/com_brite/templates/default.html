@@ -1,0 +1,38 @@
+<div id="combrite"> <!-- this must be present. If you remove id="combrite" CSS will NOT load -->
+	<div class="summary">
+		<div class="basic_info">
+			<span class="label">Event:</span>
+			<div class="data"><a href="{EVENT_URL}" target="_blank">{EVENT_TITLE}</a></div>
+			<span class="label">Start:</span>
+			<div class="data">{EVENT_START}</div>
+			<span class="label">End:</span>
+			<div class="data">{EVENT_END}</div>
+			<span class="label">Category:</span>
+			<div class="data">{EVENT_CATEGORY}</div>
+			<span class="label">Organizer:</span>
+			<div class="data"><a href="{ORGANIZER_URL}" target="_blank" >{ORGANIZER_NAME}</a></div>
+		</div> <!-- summary -->
+		<div class="venue">
+			<span class="label">Venue:</span>
+			<div class="data"><a href="{VENUE_URL}" target="_blank" >{VENUE_NAME}</a></div>
+			<span class="label">Address:</span>
+			<div class="data">{VENUE_FORMATED_ADDRESS}</div>
+		</div> <!-- venue -->
+	</div>
+	
+	<!-- TICKETS  -->
+	{combrite_tickets {EVENT_ID};{NUMBER_OF_TICKETS}}	
+
+	<!-- MAP -->
+	{combrite_map {VENUE_LAT};{VENUE_LNG};{EVENT_TITLE};{VENUE_ADDRESS}}
+
+	<div class="description">
+		{EVENT_DESCRIPTION}
+	</div>
+	<div id="metadata">
+		<h2>Metadata (will be hidden)</h2>
+		EventID = {EVENT_ID} <br>
+		OrganizerID = {ORGANIZER_ID} <br>
+		VenueID = {VENUE_ID} <br>
+	</div>
+<div>

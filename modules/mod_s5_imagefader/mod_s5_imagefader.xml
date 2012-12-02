@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<extension type="module" version="1.6.0" method="upgrade" client="site">
+	<name>S5 Image Fader v3</name>
+	<author>Shape5.com</author>
+	<creationDate>October 2007</creationDate>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>contact@shape5.com</authorEmail>
+	<authorUrl>www.shape5.com</authorUrl>
+	<version>3.0.0</version>
+	<description>The Image Fader 3.0 runs off of mootools and allows you to use an unlimited number of images to rotate through. You simply select a directory on your server to pull images from and the module will pull and display all the images from that directory! You can choose from fade in/out, zoom/pan and slide for the transition effects between images. We still included the legacy option running of S5 Effects if you need to run the older version of this module.</description>
+	<files>
+		<filename module="mod_s5_imagefader">mod_s5_imagefader.php</filename>
+        <folder>s5_imagefader</folder>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+	<fields name="params">
+	<fieldset name="basic">
+		
+        
+		<field name="pretext" type="textarea" cols="40" rows="5" default="" label="Pre-Text" description="Enter any pre-text message." />
+		<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+		
+		<field name="height" type="text" default="183" label="Height" description="Enter the height of the image fader." />
+        <field name="width" type="text" default="482" label="Width" description="Enter the width of the image fader." />
+		<field name="tween_time" type="text" default="0.75" label="Tween Time (in seconds)" description="The amount of time in seconds an image takes to fade." />
+        <field name="display_time" type="text" default="3" label="Display Time (in seconds)" description="How many seconds will each image display for?" />
+        <field name="background" type="text" default="" label="Background Color (leave blank for none) ex:FFFFFF" description="Enter the background color. Leave blank for none." />
+        <field name="s5_imagefaderver" type="radio" default="0" label="Choose your mode" description="Choose which version of the image fader you want to use version 2 or legacy mode.">
+			<option value="0">Version 2.0</option>
+			<option value="1">Legacy 1.0</option>
+		</field>      
+		<field name="If using version 2.0 fill in details below, if version 1.0 click the 'advanced' bar below to enter in image urls etc for version 2" type="spacer" default="If using version 2.0 fill in details below, if version 1.0 click the 'other' bar below to enter in image urls etc for version 2" />
+		
+		<field name="imageurldirectory" type="text" default="" label="Image directory path" description="Enter the url to the director your main and thumbnail images are stored in" />
+		<field name="thumbnails" type="radio" default="0" label="Enable Thumbnails" description="Choose to enable or disable thumbnails">
+			<option value="0">Enable</option>
+			<option value="1">Disable</option>
+		</field>
+		<field name="overlaycontrols" type="radio" default="0" label="Enable Player Controls" description="Choose to enable or disable the overlay controls">
+			<option value="0">Enable</option>
+			<option value="1">Disable</option>
+		</field>
+		<field name="imageoverlap" type="radio" default="0" label="Enable Image Overlap" description="Choose to enable or disable the image overlap, if using images of different sizes its best to disable">
+			<option value="0">Enable</option>
+			<option value="1">Disable</option>
+		</field>
+		<field name="jseffectstyle" type="list" default="fade" label="Choose your effect style" description="Choose the effect style you'd like for the transition of your images">
+			<option value="fade">Fade</option>
+			<option value="zoom">Zoom and Pan</option>
+			<option value="slide">Slide</option>
+		</field>
+		
+</fieldset>	
+<fieldset name="advanced">
+		
+		<field name="s5_imagefaderstyle" type="radio" default="0" label="Fader Style" description="Choose Fade In or Fade In/Fade Out. Note - Fade In will enable navigation buttons, Fade In/Fade Out will simply rotate through the images with no buttons.">
+			<option value="0">Fade In</option>
+			<option value="1">Fade In/Fade Out</option>
+		</field>
+
+		
+		 <field name="reflection" type="radio" default="0" label="Image Reflection. Note - This will only work with Fade In/Fade Out" description="Enable the Mootools powered image reflection?">
+			<option value="0">Enable</option>
+			<option value="1">Disable</option>
+		</field>
+				
+				<field name="" default="You may enter up to 10 images. If you do not wish to use 10 simply leave the extra fields blank. IMPORTANT - Do not leave fields blank between images, ie: If you are only using 4 images then fields for images 1,2,3,4 should be filled in, not images 1,3,5,6 or any other order like it." label="Note:" description="" />
+                <field name="picture1" type="text" default="http://www.shape5.com/images/products/2007/imagefader/s5-image-fader.jpg" label="Image 1 Location URL" description="Enter the entire URL of image 1." />
+                <field name="picture1link" type="text" default="" label="Image 1 Hyperlink URL (leave blank if none)" description="Enter the entire Hyperlink URL (leave blank if none) of image 1, leave blank if none." />
+                <field name="picture1target" type="radio" default="1" label="Image 1 Link Target" description="Open hyperlink for image 1 in New Window or same?">
+			<option value="0">Same Window</option>
+			<option value="1">New Window</option>
+		</field>
+                <field name="picture2" type="text" default="" label="Image 2 Location URL" description="Enter the entire URL of image 2." />
+                <field name="picture2link" type="text" default="" label="Image 2 Hyperlink URL (leave blank if none)" description="Enter the entire Hyperlink URL (leave blank if none) of image 2, leave blank if none." />
+                <field name="picture2target" type="radio" default="0" label="Image 2 Link Target" description="Open hyperlink for image 2 in New Window or same?">
+			<option value="0">Same Window</option>
+			<option value="1">New Window</option>
+		</field>
+                <field name="picture3" type="text" default="" label="Image 3 Location URL" description="Enter the entire URL of image 3." />
+                <field name="picture3link" type="text" default="" label="Image 3 Hyperlink URL (leave blank if none)" description="Enter the entire Hyperlink URL (leave blank if none) of image 3, leave blank if none." />
+                <field name="picture3target" type="radio" default="0" label="Image 3 Link Target" description="Open hyperlink for image 3 in New Window or same?">
+			<option value="0">Same Window</option>
+			<option value="1">New Window</option>
+		</field>
+                <field name="picture4" type="text" default="" label="Image 4 Location URL" description="Enter the entire URL of image 4." />
+                <field name="picture4link" type="text" default="" label="Image 4 Hyperlink URL (leave blank if none)" description="Enter the entire Hyperlink URL (leave blank if none) of image 4, leave blank if none." />
+                <field name="picture4target" type="radio" default="0" label="Image 4 Link Target" description="Open hyperlink for image 4 in New Window or same?">
+			<option value="0">Same Window</option>
+			<option value="1">New Window</option>
+		</field>
+                <field name="picture5" type="text" default="" label="Image 5 Location URL" description="Enter the entire URL of image 5." />
+                <field name="picture5link" type="text" default="" label="Image 5 Hyperlink URL (leave blank if none)" description="Enter the entire Hyperlink URL (leave blank if none) of image 5, leave blank if none." />
+                <field name="picture5target" type="radio" default="0" label="Image 5 Link Target" description="Open hyperlink for image 5 in New Window or same?">
+			<option value="0">Same Window</option>
+			<option value="1">New Window</option>
+		</field>
+                <field name="picture6" type="text" default="" label="Image 6 Location URL" description="Enter the entire URL of image 6." />
+                <field name="picture6link" type="text" default="" label="Image 6 Hyperlink URL (leave blank if none)" description="Enter the entire Hyperlink URL (leave blank if none) of image 6, leave blank if none." />
+                <field name="picture6target" type="radio" default="0" label="Image 6 Link Target" description="Open hyperlink for image 6 in New Window or same?">
+			<option value="0">Same Window</option>
+			<option value="1">New Window</option>
+		</field>
+                <field name="picture7" type="text" default="" label="Image 7 Location URL" description="Enter the entire URL of image 7." />
+                <field name="picture7link" type="text" default="" label="Image 7 Hyperlink URL (leave blank if none)" description="Enter the entire Hyperlink URL (leave blank if none) of image 7, leave blank if none." />
+                <field name="picture7target" type="radio" default="0" label="Image 7 Link Target" description="Open hyperlink for image 7 in New Window or same?">
+			<option value="0">Same Window</option>
+			<option value="1">New Window</option>
+		</field>
+                <field name="picture8" type="text" default="" label="Image 8 Location URL" description="Enter the entire URL of image 8." />
+                <field name="picture8link" type="text" default="" label="Image 8 Hyperlink URL (leave blank if none)" description="Enter the entire Hyperlink URL (leave blank if none) of image 8, leave blank if none." />
+                <field name="picture8target" type="radio" default="0" label="Image 8 Link Target" description="Open hyperlink for image 8 in New Window or same?">
+			<option value="0">Same Window</option>
+			<option value="1">New Window</option>
+		</field>
+                <field name="picture9" type="text" default="" label="Image 9 Location URL" description="Enter the entire URL of image 9." />
+                <field name="picture9link" type="text" default="" label="Image 9 Hyperlink URL (leave blank if none)" description="Enter the entire Hyperlink URL (leave blank if none) of image 9, leave blank if none." />
+                <field name="picture9target" type="radio" default="0" label="Image 9 Link Target" description="Open hyperlink for image 9 in New Window or same?">
+			<option value="0">Same Window</option>
+			<option value="1">New Window</option>
+		</field>
+                <field name="picture10" type="text" default="" label="Image 10 Location URL" description="Enter the entire URL of image 10." />
+                <field name="picture10link" type="text" default="" label="Image 10 Hyperlink URL (leave blank if none)" description="Enter the entire Hyperlink URL (leave blank if none) of image 10, leave blank if none." />
+                <field name="picture10target" type="radio" default="0" label="Image 10 Link Target" description="Open hyperlink for image 10 in New Window or same?">
+			<option value="0">Same Window</option>
+			<option value="1">New Window</option>
+		</field>
+	
+		
+	
+	</fieldset>
+	</fields>
+	</config>
+</extension>

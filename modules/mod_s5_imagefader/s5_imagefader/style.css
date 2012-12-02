@@ -1,0 +1,13 @@
+#blenddiv {
+background-repeat:no-repeat;
+overflow:hidden;
+position:absolute;
+z-index:1;
+}
+
+.s5_button_if {
+width:19px;
+float:right;
+height:20px;
+padding-right:4px;
+cursor:pointer; }

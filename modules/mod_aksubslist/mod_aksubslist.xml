@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" method="upgrade" client="site">
+	<name>Akeeba Subscriptions - List of active subscriptions</name>
+	<author>Nicholas K. Dionysopoulos</author>
+	<creationDate>March 2011</creationDate>
+	<copyright>Copyright (C) 2011-2012 Nicholas K. Dionysopoulos / AkeebaBackup.com</copyright>
+	<license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
+	<authorEmail>nicholas@akeebabackup.com</authorEmail>
+	<authorUrl>www.akeebabackup.com</authorUrl>
+	<version>1.0</version>
+	<description>MOD_AKSUBSLIST_DESCRIPTION</description>
+	<files>
+		<file module="mod_aksubslist">mod_aksubslist.php</file>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_aksubslist.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_aksubslist.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default="" label="MOD_AKSUBSLIST_SUFFIX_LABEL" description="MOD_AKSUBSLIST_SUFFIX_DESC" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="cache" type="list" default="1" label="MOD_AKSUBSLIST_CACHING_LABEL" description="MOD_AKSUBSLIST_CACHING_DESC">
+					<option value="1">MOD_AKSUBSLIST_CACHING_OPT_GLOBAL</option>
+					<option value="0">MOD_AKSUBSLIST_CACHING_OPT_NONE</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="MOD_AKSUBSLIST_CACHETIME_LABEL" description="MOD_AKSUBSLIST_CACHETIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

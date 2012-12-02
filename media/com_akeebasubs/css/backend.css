@@ -1,0 +1,212 @@
+/**
+ * @package		akeebasubs
+ * @copyright	Copyright (c)2010-2012 Nicholas K. Dionysopoulos / AkeebaBackup.com
+ * @license		GNU GPLv3 <http://www.gnu.org/licenses/gpl.html> or later
+ */
+
+ /**
+ * Selective reset of Bootstrap styling
+ */
+div.akeeba-bootstrap { background: transparent; }
+div.icon a.modal { position: relative; top: inherit; left: inherit; z-index: inherit; margin: 0 !important; box-shadow: none;  }
+div.ak_clr_left { clear: left; }
+div.ak_clr { clear: both; }
+div.icon-wrapper, .akeeba-bootstrap [class^="icon-wrapper"] { display: inline; }
+
+div.akeeba-bootstrap form.form-horizontal-wide label.control-label { width: 300px }
+div.akeeba-bootstrap form.form-horizontal-wide div.controls { margin-left: 320px }
+div.akeeba-bootstrap form.form-horizontal-wide textarea { width: 450px }
+
+td.order span { line-height: 16px; height: 16px; margin: 0; padding: 0; }
+td.order a.jgrid span.state { background-repeat: no-repeat; height: 12px; margin-bottom: 2px }
+td.order a.jgrid span.state span.text { line-height: 16px; }
+td.order input.text_area { width: 20px; }
+
+div.akeeba-bootstrap label.radiobtn { display: inline-block; }
+.decrapbooleanlist label.radiobtn { display: inline-block; float: none; clear: none; }
+.decrapbooleanlist input { display: inline-block; float: none; clear: none; }
+
+div.controls span.floatme { display: inline-block; float: left; padding: 5px; }
+
+/**
+ * Icons and stuff
+ */
+ 
+ 
+.icon-48-akeebasubs {
+	background: transparent url(../images/akeebasubs-48.png) no-repeat !important;
+}
+
+.container_16 .icon-48-akeebasubs {
+	padding-right: 20px;
+	background: transparent url(../images/akeebasubs-16.png) 5px right no-repeat !important;
+}
+
+.icon-32-subrefresh { background: transparent url(../images/subrefresh.png); }
+#toolbar-Link .icon-32-export { background: transparent url(../images/export.png); }
+
+fieldset label { float: left; }
+
+#enabled0, #enabled1, label[for=enabled0], label[for=enabled1],
+#combine0, #combine1, label[for=combine0], label[for=combine1],
+#isbusiness0, #isbusiness1, label[for=isbusiness0], label[for=isbusiness1],
+#viesregistered0, #viesregistered1, label[for=viesregistered0], label[for=viesregistered1]
+{
+	float: none;
+	display: inline-block;
+}
+
+span.akeebasubs-booleangroup {
+	float: left;
+}
+
+span.akeebasubs-booleangroup input,
+span.akeebasubs-booleangroup label {
+	float: none !important;
+	display: inline-block !important;
+	margin-left: 4px !important;
+	padding: 0 !important;
+}
+
+.akeebasubs-clear { clear:both; }
+label.title, input.title { font-weight: bold; font-size: larger; }
+label.main { display: inline-block; width: 45%; background: #e0e0e0; border-bottom: 1px solid gray; padding: 2px; margin-bottom: 2px }
+input.longer { width: 40% }
+
+#levels-basic, #subscriptions-basic { display: block; float: left; width: 45%; margin: 0 10px 1em 0; }
+#image-preview { display: block !important; border: thin solid gray !important; border-radius: 5px; margin: 2px 2px 2px 48% !important; width: 80px !important; height: 80px !important; box-shadow: 0px 0px 5px #999; }
+fieldset.akeebasubs-float-left {
+	float: left; width: 48%;
+}
+
+.sublevelpic { float: left; margin-right: 3px; }
+.subslevel { float: left; margin-top: 10px; }
+.gravatar { margin-right: 3px; }
+
+.akeebasubs-subscription-netamount { display: block; color: #693; }
+.akeebasubs-subscription-discountamount { display: block; color: #f33; }
+.akeebasubs-subscription-taxamount { display: block; color: #963; font-style: italic; }
+.akeebasubs-subscription-grossamount { display: block; font-weight: bold; color: #333; font-size: larger; border-top: thin solid #999; }
+.akeebasubs-subscription-amount { text-align: right; width: 60px; }
+
+.akeebasubs-payment { display: block; position: relative; float: left; margin: 0px auto; padding: 0; width: 30px; height: 30px; background-image: url('../images/dollaricons.png'); background-repeat: no-repeat; }
+.akeebasubs-payment-n { background-position: 0px 0px }
+.akeebasubs-payment-p { background-position: -30px 0px }
+.akeebasubs-payment-c { background-position: -60px 0px }
+.akeebasubs-payment-x { background-position: -90px 0px }
+
+tr.expired td { background: rgba(255,220,220,128) !important; color: gray; }
+tr.expired td a { color: gray; }
+tr.expired td .akeebasubs-subscription-netamount { color: gray; }
+tr.expired td .akeebasubs-subscription-taxamount { color: gray; }
+tr.expired td .akeebasubs-subscription-grossamount { color: gray; }
+
+.akeebasubs-coupon-discount-value:before{ content: '- '; }
+.akeebasubs-coupon-discount-value { color: red; font-weight: bold; }
+
+.akeebasubs-coupon-discount-percent { color: #336666; font-weight: bold; }
+.akeebasubs-coupon-discount-lastpercent { color: #F90; font-weight: bold; }
+
+#refreshMessage h3, #refreshMessage p { text-align: center; }
+
+#akthrobber {
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin: auto;
+	padding-top: 142px;
+}
+
+#aksaleschart {
+	width: 100%;
+	min-width: 450px;
+	height: 300px;
+}
+
+#aklevelschart {
+	width: 100%;
+	min-width: 450px;
+	height: 300px;
+}
+
+.desc {
+	background: transparent url(../images/sort_desc.png) 4px right no-repeat;
+	padding: 0 11px
+}
+
+.asc {
+	background: transparent url(../images/sort_asc.png) 4px left no-repeat;
+	padding: 0 11px
+}
+
+.submitable {
+	cursor: pointer;
+}
+
+.akstriangle {
+	display: inline-block !important;
+	width: 0px;
+	height: 0px;
+	margin: 0 -3px 0 0;
+	padding: 0;
+	border: 4px solid black;
+	border-color: transparent transparent transparent #025A8D;
+}
+
+.akeebasubs-nofloat-input input {
+	float: none;
+}
+
+.akeebasubs-nofloat-input img.calendar {
+	float: none;
+	padding: 0;
+	margin: 0 0 -4px 3px;
+}
+
+.level-image-preview {
+	max-width: 150px;
+	max-height: 64px;
+	margin: 5px 0 2px 0;
+	border: thin solid black;
+	border-radius: 6px;
+	box-shadow: #999 1px 1px 3px;
+}
+
+.akeebasubs-susbcription-publishup {
+	text-align: left;
+}
+
+.akeebasubs-susbcription-publishdown {
+	text-align: right;
+	color: red;
+}
+
+.discount-icon {
+	display: block;
+	float: left;
+	margin-right: 5px;
+	width: 16px;
+	height: 16px;
+	background: transparent url(../images/couponicons.png) 0 0 no-repeat;	
+}
+
+.akeebasubs-subscription-discount-upgrade .discount-icon {
+	background-position: -16px 0px;
+}
+
+.akeebasubs-subscription-discount-coupon {
+	font-weight: bold;
+	color: #693;
+}
+
+.akeebasubs-subscription-discount-upgrade {
+	font-weight: bold;
+	color: #963;
+}
+
+.akeebasubs-subscription-discount-none {
+	font-weight: normal;
+	font-style: italic;
+	font-size: xx-small;
+	color: #ccc;
+}

@@ -1,0 +1,53 @@
+#combrite {
+
+}
+
+#combrite .summary {
+  border-top: 1px solid #BBB;
+  border-bottom: 1px solid #BBB;
+  margin: 8px 0 18px 0;
+  padding: 12px 0 2px;
+  overflow: hidden;
+  clear: both;
+}
+
+#combrite .basic_info {
+  width: 48%;
+  float: left;
+  margin-right: 4%;
+}
+
+#combrite .venue {
+  width: 48%;
+  float: left;
+}
+
+#combrite span.label {
+  float: left;
+  clear: left;
+  font-weight: bold;
+  width: 80px;
+}
+
+#combrite .data {
+  float: left;
+  margin-bottom: 10px;
+}
+
+#combrite img {
+  float: right;
+  padding: 5px;
+  border: 1px solid #EEE;
+  margin-left: 10px;
+  margin-top: 10px;
+  
+}
+#combrite #organizer {
+
+}
+
+#combrite #metadata {
+	display:none;
+}
+
+

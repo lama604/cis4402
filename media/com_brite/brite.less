@@ -1,0 +1,511 @@
+/********************************
+ Joomla component container
+*********************************/
+
+
+#toolbar-box {
+  display:none;
+}
+
+.submenu-box, div.m {
+  border: none !important;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
+  background-color: white !important;
+}
+
+// cleaning joomla admin template stuff
+fieldset#filter-bar {
+  border-bottom: 0;
+}
+
+/* component body, whole wrapped in one big div with id */
+#nsCombrite {
+
+  margin-top:10px;
+
+  /********************************
+   Common
+  *********************************/
+  h2 {
+    color:#421600; 
+    font-size:18px;
+    text-align:center;
+  }
+
+  p {
+    color:#8C6D61; 
+    font-size:16px; 
+    text-align: center; 
+    line-height: 24px;
+  }
+
+  .alert {
+    font-size: 14px;
+  }
+
+  /********************************
+   Accordion stuff
+  *********************************/
+
+  .accordion {
+    margin-top: 10px;
+  }
+
+  .accordion-group {
+    margin-bottom:10px !important;
+  }
+
+  .accordion-group.active {
+    .accordion-heading {
+      background-color: #F8F8F8;
+      span {
+        color: #FF660A;
+      }
+    }
+  }
+
+  .accordion-heading {
+    background-color: #fff;
+    position: relative;
+    height:45px;
+    line-height:32px;
+      span {
+        font-weight: bold;
+        font-size: 15px;
+      }
+    
+      &:hover {
+        background:#F8F8F8;
+          span {
+            color: #FF660A; 
+          } // span
+      } // hover
+  } // accordion-heding
+
+
+
+  a.accordion-toggle {
+    font-size: 1.1em;
+    color: #000 !important;
+    &:hover {
+      text-decoration: none !important;
+      color: #000 !important;
+    }
+  }
+
+
+  .accordion-inner {
+    background-color: white;
+    padding:0;
+    font-size: 13px;
+    border-top: 0;
+  }
+
+  .button-holder {
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  /*label {
+    float: none !important;
+  }*/
+
+  .filter {
+    clear: both;
+  }
+
+  /* make article button */
+  .makeArticle {
+    position: absolute;
+    right:10px;
+    top: 8px;
+    color: #333 !important;
+    &.btn-primary {
+      color: white !important;
+    }
+  }
+
+  /* adding icon to accordion list back */
+  .icon-arrow-down, .icon-arrow-up {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    *margin-right: .3em;
+    line-height: 14px;
+    vertical-align: text-top;
+    background-image: url("bootstrap/img/glyphicons-halflings.png");
+    background-position: 14px 14px;
+    background-repeat: no-repeat;
+    
+  }
+
+  .icon-arrow-down {
+    background-position: -312px -96px;
+  }
+
+  .icon-arrow-up {
+    background-position: -289px -96px;
+  }
+
+
+  /********************************
+   Tables
+  *********************************/
+  .table {
+    margin-bottom:0;
+    border-top: 0px;
+    .label-descr {
+      font-weight:bold;
+      width: 120px;
+    }
+    td {
+      border-bottom: 1px solid #DDD !important;
+      padding-left:17px;
+      &:nth-last-of-type(-n+2) {
+        border-bottom: 0px solid #DDD !important;
+      }
+    }
+    th {
+      border-top: 0px solid #DDD;
+      border-bottom: 1px solid #DDD !important;
+      padding-left:17px;
+      font-weight:normal;
+      min-width:120px;
+    } // th
+  } // table 
+
+
+
+  /********************************
+   Filter box
+  *********************************/
+
+
+  .roundedBox {
+    .rounded(4px);
+  }
+
+  a.poweredByEventbrite {
+    height:60px;
+    width:124px;
+    display:inline-block;
+    background: url(img/eventbrite-logo.png) no-repeat;
+    position: absolute; top: 107px; left: 31px;
+  }
+
+  // glowin background
+  .bg-trans {
+    background: url(img/header-glare.png) no-repeat center center; 
+    background-size: 100% 100%; 
+    width: 100%; 
+    height: 100%; 
+    margin:0; 
+    padding:0
+  }
+
+  @-webkit-keyframes colours {
+      0% {background-size: 100% }
+     70% {background-size: 50% }
+    100% {background-size: 100% }
+  }
+
+  .bg-trans {
+    -webkit-animation-direction: normal;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: colours;
+    -webkit-animation-timing-function: ease;
+  }
+
+  .border-radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+    -webkit-border-top-right-radius: @topright;
+    -webkit-border-bottom-right-radius: @bottomright;
+    -webkit-border-bottom-left-radius: @bottomleft;
+    -webkit-border-top-left-radius: @topleft;
+    -moz-border-radius-topright: @topright;
+    -moz-border-radius-bottomright: @bottomright;
+    -moz-border-radius-bottomleft: @bottomleft;
+    -moz-border-radius-topleft: @topleft;
+    border-top-right-radius: @topright;
+    border-bottom-right-radius: @bottomright;
+    border-bottom-left-radius: @bottomleft;
+    border-top-left-radius: @topleft;
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+  }
+  .gradient(@color: #2374C7, @start: #2F8CEC, @stop: #185DA3) {
+    background: @color;
+    background: -webkit-gradient(linear,
+                                 left top,
+                                 left bottom,
+                                 from(@start),
+                                 to(@stop));
+    background: -webkit-linear-gradient(top,
+                                    @start,
+                                    @stop);
+    background: -ms-linear-gradient(top,
+                                    @start,
+                                    @stop);
+    background: -o-linear-gradient(top,
+                                    @start,
+                                    @stop);
+    background: -moz-linear-gradient(center top,
+                                     @start 0%,
+                                     @stop 100%);
+  }
+  .rounded(@radius: 4px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+  }
+
+  .header-unit  {
+    padding: 0px 10px 0px 10px;
+    margin-bottom: 0px;
+    height:235px;
+    @lightColor: #727272;
+    @helvetica: 'Helvetica Neue', Helvetica, Arial;
+    @whiteColor: #FFFFFF;
+    @backgroundColor: #FBFBFB;
+    @highlightedBackground:  url(img/header-background-highlight.png);
+    .header-logo{
+      text-align:center; padding-top:40px; margin-bottom:0px;
+    }
+    h1 {
+      font-size:24px; color: #fff; text-align:center; padding-bottom:10px;
+      font-family: 'Helvetica Neue', Helvetica, Arial;
+      font-weight: 300;
+      padding-bottom:20px;
+      span {
+        font-weight:500;
+      }
+    } // h1
+    .pad {
+      background:@highlightedBackground;
+      padding:10px; 
+      .rounded(5px);
+      max-width:660px;
+      margin:auto;
+    } // pad
+    p {
+      font-size:13px; 
+      color: #fff; 
+      text-align:center; 
+      font-family: 'Helvetica Neue', Helvetica, Arial; 
+      padding-top:5px; 
+      font-weight:300;
+    } // p
+
+    .searchForm {
+        position: relative;
+        height: 38px; margin-top: 0px;
+    }
+    input {
+      font-size: 14px;
+      color: @lightColor;
+      font-family: @helvetica;
+      width: 70%;
+      height: 36px;
+      padding: 0px 0 0 10px;
+      margin: 0 20px 0 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      outline: none;
+      border: 1px solid #863002;
+      -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+      .border-radius(0, 0, 3px, 3px);
+      outline: none;
+    } // input
+
+    button {
+      text-align: center;
+      width: 29%;
+      position: absolute;
+      top: 0px;
+      right: 0;
+      font-size: 16px;
+      color: @whiteColor;
+      font-family: @helvetica;
+      height: 38px;
+      line-height: 28px;
+      border: none;
+      cursor: pointer;
+      border: 1px solid #863002;
+      -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 1px 1px rgba(0, 0, 0, 0.23);
+      -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 1px 1px rgba(0, 0, 0, 0.23);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 1px 1px rgba(0, 0, 0, 0.23);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+      .border-radius(3px, 3px, 0, 0);
+      .gradient(#FF8623, #FF8623, #FF5C02);
+
+      &:after {
+        content: "Search";
+      }
+    } // button
+    .ohanah-ad {
+      opacity: 0.5;
+      &:hover {
+        opacity:1;
+        transition: opacity .10s ease-in-out;
+        -moz-transition: opacity .10s ease-in-out;
+        -webkit-transition: opacity .10s ease-in-out;
+      }
+      a {
+        color: #fff;
+        &:hover {
+          text-decoration:none;
+        } // hover
+      } // a
+      img {
+        padding-right:5px;
+      } // image
+      span {
+        font-weight:500;
+      } // span
+    } // ohanah ad
+    
+  } // header-unit
+
+  /********************************
+   Pagination
+  *********************************/
+
+  .info, .total {
+    text-align: center;
+  }
+
+  .info {
+    padding: 20px 0;
+  }
+
+  .total {
+    color: gray; 
+  }
+
+  // we must add hand cursor to pagination link since they don't have href tags to prevent "jumping" when clicked
+
+  .pagination a {
+    cursor: pointer;
+  }
+
+
+  /********************************
+   Configuration
+  *********************************/
+
+  // in event view
+  .explanation {
+    display: block;
+    color: gray;
+    font-size: 90%;
+  }
+
+  .configlink {
+    position: absolute;
+    right: 35px;
+    top: 125px;
+    background-color: transparent;
+  }
+
+  .helplink {
+    position: absolute;
+    right: 51px;
+    top: 125px;
+    background-color: transparent;
+  }
+
+  // fixing header
+
+  .container.roundedBox.config {
+    height: 73px !important;
+    border-bottom: 3px solid #FF7A26;
+    background: #320E01 url(/img/header-background.jpg); 
+    width: 100%;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    img {
+      padding-top: 11px;
+      float: left;
+      margin-left: 11px;
+      width: 50px;
+      height: 50px;
+    }
+    h2 {
+      float: left;
+      margin-left: 10px;
+      line-height: 73px;
+      font-size: 24px;
+      padding-left: 10px;
+    }
+    .bg-trans {
+      background-image: none;
+      width: 100%;
+    }
+    h2 {
+      color: white;
+    }
+
+  }
+  // config form
+  .configarea {
+    .form-horizontal {
+      margin-top: 20px;
+      
+      .controls {
+        float: left;
+        margin-left: 20px;
+      }
+      .control-label {
+        float: left;
+        width: 85px;
+        padding-top: 5px;
+        text-align: right;
+      }
+      .form-actions {
+        padding-left: 3%;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+      }
+      fieldset {
+        height: 210px;
+      }
+      .c50 {
+        float: left;
+        width: 45%;
+        &.left {
+          margin-right: 6%;
+          margin-left: 3%
+        }
+      }
+    } // form horizontal 
+    
+    label.control-label {
+      font-weight: bold;
+    }
+
+    legend {
+      margin-bottom: 0;
+      color: #421600;
+      border-bottom-color: #FF7A26;
+      //width: 405px;
+    }
+
+    .input-append .add-on {
+      margin-left: -4px;
+    }
+
+  }
+
+} // #nsCombrite
+
